@@ -1,0 +1,22 @@
+{
+  "base": "semantic\\",
+  "paths": {
+    "source": {
+      "config": "src/theme.config",
+      "definitions": "src/definitions/",
+      "site": "src/site/",
+      "themes": "src/themes/"
+    },
+    "output": {
+      "packaged": "../dist/assets/semantic/",
+      "uncompressed": "../dist/assets/semantic/components/",
+      "compressed": "../dist/assets/semantic/components/",
+      "themes": "../dist/assets/semantic/themes/"
+    },
+    "clean": "../dist/assets/semantic/"
+  },
+  "permission": false,
+  "autoInstall": false,
+  "rtl": false,
+  "version": "2.2.11"
+}
