@@ -23,6 +23,23 @@ input[name="template"]:checked ~ label{
   position: relative;
   overflow: hidden;
 
+  #mainTextContent{
+    padding: 10px;
+    width: 75%;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 3;
+    top: 450px;
+    left: 30px;
+    color: #e2e258;
+  }
+
+  #mainTextContent.hold{
+    border: dashed 1px white;
+  }
+
   #mainTemplateWrapper{
     position: relative;
     z-index: 2;
@@ -33,7 +50,9 @@ input[name="template"]:checked ~ label{
     position: absolute;
     top: 0;
     left: 0;
-    background: pink;
     z-index: 0;
+    img{
+      max-width: 100%;
+    }
   }
 }

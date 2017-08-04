@@ -40,7 +40,7 @@
         <div class="ui segment">
             <h1 class="ui large header">Nova peça</h1>
 
-            <form class="ui form" action="#" method="post">
+            <form class="ui form" action="save.php" method="post">
               <div class="field">
                 <label for="mainTitle">Título</label>
                 <input type="text" name="mainTitle" id="mainTitle" value="" placeholder="Título">
@@ -75,29 +75,14 @@
                 <br><label for="mainText">Chamada</label>
                 <input type="text" name="mainText" id="mainText" value="" placeholder="Título">
               </div>
-              <div class="field">
-                <label for="textPost">Texto para o post</label>
-                <textarea name="textPost" rows="2"></textarea>
-              </div>
-
-
-              <div class="two fields">
-                  <div class="field">
-                    <label>imageX</label>
-                    <input name="imageX" id="imageX" val="" type="text">
-                  </div>
-                  <div class="field">
-                    <label>imageY</label>
-                    <input name="imageY" id="imageY" val="" type="text">
-                  </div>
-                  <!-- <div class="field">
-                    <label>Last name</label>
-                    <input placeholder="Last Name" type="text">
-                  </div> -->
-              </div>
-
-
-
+              <input name="mainTemplate" id="mainTemplate" val="" type="text">
+              <input name="data" id="data" val="" type="text">
+              <input name="imageX" id="imageX" val="" type="text">
+              <input name="imageY" id="imageY" val="" type="text">
+              <input name="textX" id="textX" val="" type="text">
+              <input name="textY" id="textY" val="" type="text">
+              <input name="imageScaleVal" id="imageScaleVal" val="" type="text">
+              <input name="imageRotateVal" id="imageRotateVal" val="" type="text">
               <div class="field">
                 <input type="submit" class="fluid large primary ui button" name="" value="Criar">
               </div>
@@ -107,20 +92,33 @@
       </div>
       <div class="eight wide column">
         <div class="ui segment">
-            <h1 class="ui large header">Preview</h1>
-
-            <div id="mainStage">
-              <div id="mainTextContent" contentEditable="true">
-                  Este conteúdo pode ser editado.
-              </div>
-              <div id="previewImageWrapper">
+          <h1 class="ui large header">Preview</h1>
+          <div id="mainStage">
+            <div id="mainTextContent"></div>
+            <div id="previewImageWrapper">
+              <div id="imageRotateImage">
                 <img src="#" id="previewImage" alt="">
               </div>
-              <div id="mainTemplateWrapper">
-                <img width="100%" src="#" id="mainTemplate" alt="">
-              </div>
             </div>
-
+            <div id="mainTemplateWrapper">
+              <img width="100%" src="#" id="mainTemplateImg" alt="" >
+            </div>
+          </div>
+      </div>
+      <div class="ui segment" id="imageAjustment">
+        <h1 class="ui small header">Ajustes de imagem</h1>
+        <div class="ui form">
+          <div class="two fields">
+            <div class="field">
+              <label>Escala</label>
+              <input name="imageScale" id="imageScale" value="1"  min="0.25" max="2" step="0.01" type="range">
+            </div>
+            <div class="field">
+              <label>Rotacionar</label>
+              <input name="imageRotate" id="imageRotate" value="0" min="0" max="180" type="range">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
